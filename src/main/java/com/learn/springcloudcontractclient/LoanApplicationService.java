@@ -20,7 +20,7 @@ public class LoanApplicationService {
     public LoanApplicationVerificationResponse verifyLoanApplication(LoanApplication loanApplication) {
 
         FraudServiceRequest fraudServiceRequest = new FraudServiceRequest.Builder()
-                .fromClientId(1234567890)
+                .fromClientId("a23er456-3er4-drt5-1we34rfbghuy")
                 .fromLoanAmount(loanApplication.getLoanAmount())
                 .build();
 

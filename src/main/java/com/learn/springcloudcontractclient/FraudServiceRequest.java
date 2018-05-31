@@ -7,7 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
 public class FraudServiceRequest {
     @JsonProperty(value = "client.id")
-    private int clientId;
+    private String clientId;
 
     private int loanAmount;
 
@@ -18,7 +18,7 @@ public class FraudServiceRequest {
     }
 
     public static class Builder {
-        private int clientId;
+        private String clientId;
         private int loanAmount;
 
         public Builder fromLoanAmount(int value) {
@@ -26,7 +26,7 @@ public class FraudServiceRequest {
             return this;
         }
 
-        public Builder fromClientId(int value) {
+        public Builder fromClientId(String value) {
             this.clientId = value;
             return this;
         }
@@ -35,7 +35,7 @@ public class FraudServiceRequest {
             return new FraudServiceRequest(this);
         }
 
-        public int getClientId() {
+        public String getClientId() {
             return clientId;
         }
 
