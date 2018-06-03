@@ -19,6 +19,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
 @AutoConfigureStubRunner(ids = {"com.learn:spring-cloud-contract-server:+:stubs:6565"},
         stubsMode = StubRunnerProperties.StubsMode.LOCAL,
+        repositoryRoot = "http://repo.spring.io/libs-snapshot",
 mappingsOutputFolder = "target/outputmappings/")
 @DirtiesContext
 public class LoanApplicationServiceTests {
